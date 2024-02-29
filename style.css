@@ -104,7 +104,7 @@ path.current-floor {
     line-height: 37px;
     color: #635854;
 }
-.counter {
+.flor-counter {
     font-family: 'Bebas Neue Cyrillic', sans-serif;
     color: #635854;
     font-size: 124px;
@@ -144,6 +144,14 @@ path.current-floor {
     background-color: #fff;
     flex-grow: 1;
     display: flex;
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: transform 0.2s, opacity 0.2s;
+    transition-delay: 0.2s;
+}
+.is-open > .modal-dialog {
+    opacity: 1;
+    transform: translateY(0);
 }
 .modal-image {
     background-color: #ebebeb;
@@ -151,7 +159,7 @@ path.current-floor {
     text-align: center;
     padding: 50px;
 }
-.modak-title {
+.modal-title {
     font-family: 'Bebas Neue Cyrillic', sans-serif;
     font-weight: normal;
     font-size: 24px;
@@ -159,6 +167,14 @@ path.current-floor {
     margin-top: 0;
     margin-bottom: 25px;
 }
+.flats path {
+    opacity: 0;
+    cursor: pointer;
+}
+.flats path:hover {
+    opacity: 1;
+}
+
 .modal-info {
     width: 40%;
     padding: 50px 46px;

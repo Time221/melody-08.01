@@ -5,6 +5,7 @@ $(document).ready(function () {
     var counterDown = $(".counter-button.couner-arrow-down");
     var modal = $(".modal");
     var modalCloseButton = $(".modal-close-button");
+    var viewFlatsButton = $(".view-flats");
 
     floorPath.on('mouseover', function () {
         currentFloor = $(this).attr("data-floor");
@@ -12,9 +13,9 @@ $(document).ready(function () {
     });
 
     floorPath.on('click', togglemodal);
-
     modalCloseButton.on("click", togglemodal);
-
+    viewFlatsButton.on('click', togglemodal);
+    
     counterUp.on("click", function() {
         if (currentFloor < 18) {
             currentFloor++;
